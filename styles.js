@@ -34,6 +34,7 @@ const etaUtente = prompt ("Quanti anni hai?") ;
 
 const kilometriUtente = prompt ("Quanti km devi percorrere per arrivare alla tua destinazione?");
 
+
 const prezzoAlKm = "0.21";
 
 const scontoGiovani = "0.2";
@@ -46,3 +47,46 @@ let prezzoScontatoAnziani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto *
 
 let prezzoScontatoGiovani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto * scontoGiovani )
 
+/* se la persona ha meno di 18 anni applica sconto */
+
+if(etaUtente < 18){
+    prezzoScontatoGiovani
+}else if(etaUtente > 65){
+    prezzoScontatoAnziani
+}
+
+const liNomeCognomeUtente = document.getElementById("nome-cognome-utente");
+
+liNomeCognomeUtente.innerHTML = `<strong class="text-danger">
+                                    <small class="text-dark">NOME e COGNOME :</small>${nomeUtente} ${cognomeUtente}
+                                </strongs>`;
+
+
+const liEtaUtente = document.getElementById("eta-utente")
+
+liEtaUtente.innerHTML = `<strong class="text-danger">
+                            <small class="text-dark">ETA' :</small>${etaUtente} 
+                        </strongs>`;
+
+
+const liKmUtente = document.getElementById("kilometri-utente")
+
+liKmUtente.innerHTML = `<strong class="text-danger">
+                            <small class="text-dark">KM DA PERCORRERE :</small>${kilometriUtente} 
+                        </strongs>`;
+
+
+
+
+const liPrezzoBiglietto = document.getElementById("prezzo-biglietto")
+
+liPrezzoBiglietto.innerHTML = `<strong class="text-danger">
+                                    <small class="text-dark">PREZZO BIGLIETTO :</small>${calcoloPrezzoBiglietto} $
+                                </strongs>`;
+
+
+const liPrezzoScontato = document.getElementById("prezzo-biglietto-scontato")
+
+liPrezzoScontato.innerHTML = `<strong class="text-danger">
+                                    <small class="text-dark">PREZZO SCONTATO :</small>${prezzoScontatoAnziani} ${prezzoScontatoGiovani}
+                                </strongs>`;
