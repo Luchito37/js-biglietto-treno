@@ -51,8 +51,14 @@ let prezzoScontatoGiovani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto *
 
 if(etaUtente < 18){
     prezzoScontatoGiovani
-}else if(etaUtente > 65){
+}else{
+    calcoloPrezzoBiglietto
+}
+
+if(etaUtente > 65){
     prezzoScontatoAnziani
+}else{
+    calcoloPrezzoBiglietto
 }
 
 const liNomeCognomeUtente = document.getElementById("nome-cognome-utente");

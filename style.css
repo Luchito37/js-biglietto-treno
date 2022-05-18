@@ -1,0 +1,7 @@
+.helloworld{
+    padding: 20px 0px;
+    background-color: beige;
+    border: solid 5px #dede93;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 0px 2px #000000;
+}
