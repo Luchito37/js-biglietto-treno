@@ -26,3 +26,23 @@ faccio questo
 Altrimenti
 */
 
+const nomeUtente = prompt ("Qual è il tuo nome?") ;
+
+const cognomeUtente = prompt ("Quale è il tuo cognome?") ;
+
+const etaUtente = prompt ("Quanti anni hai?") ;
+
+const kilometriUtente = prompt ("Quanti km devi percorrere per arrivare alla tua destinazione?");
+
+const prezzoAlKm = "0.21";
+
+const scontoGiovani = "0.2";
+
+const calcoloPrezzoBiglietto = kilometriUtente * prezzoAlKm
+
+const scontoAnziani = "0.4";
+
+let prezzoScontatoAnziani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto * scontoAnziani )
+
+let prezzoScontatoGiovani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto * scontoGiovani )
+
