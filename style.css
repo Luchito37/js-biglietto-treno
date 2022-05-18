@@ -1,7 +1,17 @@
+.javaloaper{
+    background-image: url(img/notturno.jpeg);
+    height: 100vh;
+    background-position: center;
+}
+
+.space-space{
+    padding-top: 100px;
+}
+
 .helloworld{
     padding: 20px 0px;
-    background-color: beige;
-    border: solid 5px #dede93;
-    border-radius: 20px;
-    box-shadow: inset 0px 0px 0px 2px #000000;
+    background-color: #e3c283;
+    border: solid 5px #a96827;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 0px 2px #423112;
 }

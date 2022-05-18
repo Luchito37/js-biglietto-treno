@@ -30,7 +30,7 @@ const nomeUtente = prompt ("Qual è il tuo nome?") ;
 
 const cognomeUtente = prompt ("Quale è il tuo cognome?") ;
 
-const etaUtente = prompt ("Quanti anni hai?") ;
+let etaUtente = parseInt(prompt ("Quanti anni hai?") )
 
 const kilometriUtente = prompt ("Quanti km devi percorrere per arrivare alla tua destinazione?");
 
@@ -39,27 +39,23 @@ const prezzoAlKm = "0.21";
 
 const scontoGiovani = "0.2";
 
-const calcoloPrezzoBiglietto = kilometriUtente * prezzoAlKm
+let prezzoBiglietto = kilometriUtente * prezzoAlKm
 
 const scontoAnziani = "0.4";
 
-let prezzoScontatoAnziani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto * scontoAnziani )
+//prezzoBiglietto - ( prezzoBiglietto * scontoAnziani )
 
-let prezzoScontatoGiovani =  calcoloPrezzoBiglietto - ( calcoloPrezzoBiglietto * scontoGiovani )
 
 /* se la persona ha meno di 18 anni applica sconto */
 
 if(etaUtente < 18){
-    prezzoScontatoGiovani
-}else{
-    calcoloPrezzoBiglietto
+    prezzoBiglietto = prezzoBiglietto - ( prezzoBiglietto * scontoGiovani )
+    console.log("giovane!", etaUtente)
+}
+if(etaUtente > 65){
+    prezzoBiglietto = prezzoBiglietto - ( prezzoBiglietto * scontoAnziani )
 }
 
-if(etaUtente > 65){
-    prezzoScontatoAnziani
-}else{
-    calcoloPrezzoBiglietto
-}
 
 const liNomeCognomeUtente = document.getElementById("nome-cognome-utente");
 
@@ -87,12 +83,5 @@ liKmUtente.innerHTML = `<strong class="text-danger">
 const liPrezzoBiglietto = document.getElementById("prezzo-biglietto")
 
 liPrezzoBiglietto.innerHTML = `<strong class="text-danger">
-                                    <small class="text-dark">PREZZO BIGLIETTO :</small>${calcoloPrezzoBiglietto} $
-                                </strongs>`;
-
-
-const liPrezzoScontato = document.getElementById("prezzo-biglietto-scontato")
-
-liPrezzoScontato.innerHTML = `<strong class="text-danger">
-                                    <small class="text-dark">PREZZO SCONTATO :</small>${prezzoScontatoAnziani} ${prezzoScontatoGiovani}
+                                    <small class="text-dark">PREZZO BIGLIETTO :</small>${prezzoBiglietto} $
                                 </strongs>`;
